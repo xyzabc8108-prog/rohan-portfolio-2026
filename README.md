@@ -26,6 +26,8 @@ The site will be served at **https://xyzabc8108-prog.github.io/rohan-portfolio-2
 
 - Deepfake detection performance shown relates to a held-out experimental test set (119 videos) and is not a claim of real-world generalization.
 - Indian Market Lab is research-only; ROVAN is an offline prototype.
+- Ashok Enterprise is represented as a private development project. The previously used `ashokenterprise.com` public link was incorrect and is removed; no public live deployment is verified.
+- Digital forensics is not listed as a focus area.
 - Email contact uses `mailto:`, with no backend.
 - Includes mobile navigation, keyboard-accessible links and reduced-motion support.
 
