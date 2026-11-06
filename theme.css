@@ -1,0 +1,135 @@
+/* Aurora V5: cobalt / turquoise / violet / amber. Responsive, accessible and static. */
+:root {
+  --white:#071627; --paper:#0c2036; --black:#eff8ff; --charcoal:#eaf1ff; --grey:#a4bed7;
+  --border:#2a4869; --border-dark:#365a80; --aqua:#53ddff; --amber:#ffb56d; --violet:#a390ff;
+}
+html { color-scheme:dark }
+body {background:#071627;color:#edf7ff;background-image:radial-gradient(ellipse at 90% 10%,#174b9a33,transparent 32%);}
+::selection{background:#4bdaf5;color:#031a2a}
+button:focus-visible,a:focus-visible{outline-color:#60dfff}
+.progress{height:4px;background:linear-gradient(90deg,#408aff,#5de8e3,#ffb868)}
+.header{background:#06182aee;border-bottom:1px solid #345878;backdrop-filter:blur(16px)}
+.identity-mark,.identity-name{color:#f7fbff}
+.identity-dot,.identity-name small{color:#62dfff}
+.nav a:hover,.footer a:hover{color:#67e4ff}
+.nav a::after{background:#5addf9}
+.availability{border-color:#257b76;color:#b0ffdf;background:#0c3440}
+.availability:hover{background:#136d71;color:#fff}
+.availability-indicator{background:#64ffbc;box-shadow:0 0 0 3px #5df7b52c,0 0 14px #5ff5af77}
+.menu-button{color:#f4f9ff;border-color:#426e8b}
+.menu-button span{background:#f2f9ff}
+.hero{background:radial-gradient(ellipse at 90% 21%,#225dbe69,transparent 41%),radial-gradient(ellipse at 19% 88%,#6a3daa43,transparent 36%),#08192f}
+.hero-gridline{background-image:linear-gradient(90deg,transparent 49.96%,#a3dfff1d 50%,transparent 50.04%);opacity:1}
+.hero-meta,.hero-foot,.eyebrow{color:#c1d5e9}
+.meta-square{background:#5be4ff;box-shadow:0 0 0 4px #5be4ff26}
+.eyebrow-rule{background:#67dfff}
+.hero-title{color:#fff;text-shadow:0 4px 40px #001527}
+.title-outline{-webkit-text-stroke:1.6px #66dfff;color:transparent;filter:drop-shadow(0 0 20px #51dfff38)}
+.title-indent i{color:#ffb875;font-style:normal}
+.hero-lower{border-bottom-color:#3b6380}
+.hero-lower p{color:#c9ddf0}
+.round-link{border-color:#54dfff;background:#133e63;color:#fff;box-shadow:0 0 0 8px #50dcff19}
+.round-link:hover{background:#49dafe;color:#071d30}
+.poster{color:#f2fbff;background:linear-gradient(135deg,#0b2f6b,#14224f 56%,#34216c);border:1px solid #4f9ccc;box-shadow:13px 13px 0 #1b416b;transform:perspective(1200px) rotateY(-3deg)}
+.poster::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 53% 47%,#24c8ed65,transparent 38%),radial-gradient(circle at 89% 81%,#ffb7693b,transparent 34%);pointer-events:none}
+.poster-head,.poster-foot{color:#c5eaff}
+.poster-head{border-bottom-color:#68b8db77}
+.poster-grid{background-image:linear-gradient(#b5e6ff16 1px,transparent 1px),linear-gradient(90deg,#b5e6ff16 1px,transparent 1px)}
+.poster-ring{border-color:#65dfff;box-shadow:0 0 60px #58dfff2b;opacity:.82}
+.poster-letter-back{color:#073b7f;-webkit-text-stroke:1px #8aeaff}
+.poster-letter-front{color:#f6feff;text-shadow:2px 2px 0 #52c9ff,5px 5px 0 #2588d3,9px 9px 0 #3853a9,15px 15px 0 #1e3d7e}
+.poster-cross{color:#76ebff}
+.poster-tape{color:#d9eeff}
+.poster-number b{color:#ffc17c}
+.ticker{background:linear-gradient(100deg,#123d76,#303c9b 53%,#21427a);border-color:#3b7bb6;color:#f7fbff}
+.ticker b{color:#ffb56d}
+.projects{background:linear-gradient(#071627,#0b2038 57%,#07192d)}
+.section-index{color:#67dfff;letter-spacing:.12em}
+.section-intro h2,.expertise-header h2,.about h2{color:#f2faff}
+.asterisk{color:#ffb56d}
+.intro-note{color:#b0c9de}
+.work-item,.work-item:first-child{border-color:#315373}
+.work-label{color:#9dbbd6}
+.work-label span:last-child{color:#ffc38a}
+.work-main h3{color:#f7fbff}
+.work-arrow{color:#65e4fa}
+.work-main>p{color:#bcd2e7}
+.work-tags span{background:#173453;border:1px solid #416e95;color:#bceaff;border-radius:4px}
+.work-result{border-color:#3d6788}
+.work-result strong{color:#71e4ff}
+.work-result .status-title{font-size:clamp(21px,2.5vw,37px);letter-spacing:-.045em;white-space:nowrap}
+.work-result span{color:#d7eaff}
+.work-result small{color:#9bb9cf}
+.text-link{color:#6ee7ff;border-bottom-color:#5edcff}
+.text-link:hover{color:#ffc17a}
+.work-note{border-color:#fdb76a;color:#f5d7a5;background:#2e3047ad}
+.work-artwork{border:1px solid #527eae;box-shadow:0 25px 45px #0007;transition:transform .3s,box-shadow .3s}
+.work-item:hover .work-artwork{transform:translateY(-6px);box-shadow:0 32px 65px #112c7655}
+.art-topline,.art-bottomline{color:#e4f5ff}
+.image-deepfake{background:radial-gradient(circle at 55% 36%,#174d91,#091b3a 65%,#061326)}
+.image-ashok{background:radial-gradient(circle at 55% 35%,#385f88,#122d45 64%,#0c192c);color:#f7fcff}
+.image-ashok .art-bottomline,.image-ashok .vertical-caption{color:#d5efff}
+.image-market{background:radial-gradient(circle at 63% 35%,#214b9c,#0c1d3f 69%);color:#f1faff}
+.image-rovan{background:radial-gradient(circle at 43% 46%,#3341b3,#14194e 57%,#08152c);color:#f4fbff}
+.image-rovan .art-bottomline{color:#f2faff}
+.end-work{color:#9cbad5}
+.expertise{background:radial-gradient(circle at 4% 34%,#246caa4d,transparent 43%),linear-gradient(120deg,#091c36,#111535);color:#f2faff}
+.expertise-header>p{color:#a9c8df}
+.expertise-visual{border-color:#456c9a;background:repeating-linear-gradient(0deg,#6fbfff1f,#6fbfff1f 1px,transparent 1px,transparent 38px),repeating-linear-gradient(90deg,#6fbfff1f,#6fbfff1f 1px,transparent 1px,transparent 38px),linear-gradient(135deg,#103059,#171944)}
+.expertise-eye{filter:drop-shadow(0 0 24px #51c8ff66)}
+.expertise-row{border-color:#3a6182}
+.expertise-row>span:first-child,.skill-icon{color:#68e5ff}
+.expertise-row h3{color:#fff}
+.expertise-row p{color:#a8c5db}
+.about{background:radial-gradient(circle at 82% 22%,#295eaf48,transparent 50%),linear-gradient(150deg,#0e2a48,#091b31)}
+.about-right{color:#c8dff2}
+.about-lead{color:#f0f8ff}
+.about-monogram{background:linear-gradient(120deg,#56caff,#316cae 52%,#ec9778);-webkit-background-clip:text;background-clip:text;color:transparent;opacity:.5}
+.timeline{border-color:#466f92}
+.timeline>div{border-color:#3d6385}
+.timeline strong{color:#f2faff}
+.timeline small{color:#a5c4df}
+.about-links a{color:#78e2ff}
+.contact{background:radial-gradient(circle at 88% 35%,#2c4bbd6c,transparent 38%),radial-gradient(circle at 10% 85%,#098f9d62,transparent 42%),linear-gradient(105deg,#061329,#121b41);color:#f3fbff}
+.contact-meta{color:#b7d5e9}
+.contact-big-button{background:linear-gradient(125deg,#55dfff,#5b95ff);color:#041b33;box-shadow:0 20px 70px #2ec7ff55}
+.contact-big-button:hover{background:linear-gradient(130deg,#ffc07b,#fd8975);color:#07192a}
+.contact-bottom{border-color:#396180}
+.contact-bottom p{color:#afcbe0}
+.contact-email>a{color:#f7fbff}
+.copy-button{border-color:#4bb4de;color:#b4edff}
+.footer{background:#050e20;border-color:#2c4b70;color:#a0bdd7}
+.footer a{color:#70e4fb}
+/* AutoMoto: custom drawn automotive reel mock, no third-party imagery. */
+.image-automoto{background:radial-gradient(circle at 77% 29%,#6756e7a8,transparent 40%),linear-gradient(160deg,#0a2050,#1c1956 63%,#06192b);color:#f7faff}
+.automoto-art{flex:1;display:grid;place-items:center;position:relative;min-height:405px;overflow:hidden}
+.automoto-glow{position:absolute;width:min(62%,350px);aspect-ratio:1;border-radius:50%;border:1px solid #79dfff66;box-shadow:0 0 0 43px #679fff12,0 0 100px 50px #7470ff3a}
+.automoto-frame{width:min(60%,240px);aspect-ratio:9 / 16;border:3px solid #83dfff;border-radius:22px;padding:17px 13px;background:linear-gradient(145deg,#184778,#09102f 69%);box-shadow:0 18px 50px #000b,0 0 38px #42cfff69;position:relative;z-index:1;transform:rotate(-7deg);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.automoto-frame::after{content:"";position:absolute;left:-30%;top:0;width:160%;height:26%;transform:rotate(-14deg);background:linear-gradient(transparent,#7cc8ff22,transparent);animation:automoto-scan 5s ease-in-out infinite;pointer-events:none}
+.automoto-frame-top,.automoto-frame-foot{display:flex;justify-content:space-between;gap:5px;font:600 8px var(--mono);color:#b9eaff}
+.automoto-frame-top span:last-child{color:#ff9898}
+.automoto-car{width:125%;margin-left:-12%;filter:drop-shadow(0 12px 12px #0008)}
+.automoto-motionline{position:absolute;bottom:24%;right:7%;display:flex;align-items:center;gap:5px;height:65px}
+.automoto-motionline span{width:4px;height:45%;border-radius:5px;background:linear-gradient(#ffbc75,#52e1ff);box-shadow:0 0 8px #60cfff55}
+.automoto-motionline span:nth-child(3n){height:90%}
+.automoto-motionline span:nth-child(2n){height:60%}
+.automoto-motionline span:nth-child(5n){height:30%}
+.automoto-orbit-note{position:absolute;top:13%;right:7%;writing-mode:vertical-rl;color:#ace8ff;font:500 9px var(--mono)}
+@keyframes automoto-scan{0%,100%{top:0;opacity:.25}50%{top:100%;opacity:1}}
+/* 6s colored entry transition, skip and reduced motion unchanged. */
+html.intro-active .intro-screen{background:radial-gradient(circle at 23% 16%,#2735a67d,transparent 43%),radial-gradient(circle at 82% 79%,#069bb288,transparent 40%),#061329;color:#f9fcff}
+.intro-screen::before{background:linear-gradient(90deg,transparent 49.93%,#66bfff22 50%,transparent 50.07%),repeating-linear-gradient(0deg,transparent 0,transparent 79px,#9dc7ff11 80px)}
+.intro-screen::after{border-color:#4bcbff66;box-shadow:0 0 0 58px #527eff14,0 0 100px #276ffb49}
+.intro-monogram{-webkit-text-stroke:2px #4fbcff50}
+.intro-rail span:first-child{color:#77dcff}
+.intro-rail span:last-child,.intro-desc{color:#a9d7ed}
+.intro-kicker{color:#ffc086}
+.intro-name span:last-child{color:#60cfff}
+.intro-name .intro-period{color:#ffb978}
+.intro-progress{background:#35678f}
+.intro-progress span{background:linear-gradient(90deg,#4d83ff,#44ebe8,#ffc184)}
+.intro-skip{border-color:#64cfff;background:#11314d;color:#d9faff}
+.intro-skip:hover,.intro-skip:focus-visible{background:#80e6ff;color:#071c2f}
+@media(max-width:800px){.poster{transform:none;box-shadow:8px 8px 0 #194777}.nav{background:#0a1e36;color:#effaff;border:1px solid #3d6b92}.work-result .status-title{white-space:normal}}
+@media(max-width:580px){.automoto-art{min-height:330px}.automoto-frame{width:min(67%,215px)}}
+@media(prefers-reduced-motion:reduce){.poster,.work-item:hover .work-artwork{transform:none}.automoto-frame::after{animation:none}}
