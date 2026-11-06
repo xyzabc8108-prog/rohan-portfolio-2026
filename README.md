@@ -2,7 +2,7 @@
 
 Official site source for **https://xyzabc8108-prog.github.io/rohan-portfolio-2026/** (once GitHub Pages is enabled).
 
-A responsive black, grey and white editorial portfolio for Rohan Chhaya, featuring cybersecurity, AI research and software projects. Built using static HTML, CSS and vanilla JavaScript, with no build tools, API keys or paid dependencies.
+A responsive deep-navy editorial portfolio with cobalt, cyan, violet and amber accents for Rohan Chhaya, featuring cybersecurity, AI research and software projects. Built using static HTML, CSS and vanilla JavaScript, with no build tools, API keys or paid dependencies.
 
 ## GitHub Pages setup
 
@@ -32,3 +32,11 @@ The site will be served at **https://xyzabc8108-prog.github.io/rohan-portfolio-2
 - Includes mobile navigation, keyboard-accessible links and reduced-motion support.
 
 The older portfolio and CV were not copied to another repository. `cv.html` has been preserved in this repository.
+
+## Portfolio updates (November 2026)
+
+- The portfolio states plainly: project concepts and creative direction are the owner's; most implementation is AI-generated; hands-on testing has been limited.
+- Deepfake Detection is unfinished ongoing research. An initial experiment reported 97.48% fusion accuracy on 119 test clips, a preliminary dataset-specific result, not final verification.
+- AutoMoto Studio is included as a private, owner-only, work-in-progress automotive Reels editor with an access-controlled Render URL. No public source or open demo is claimed.
+- The previous monochrome design has been replaced by a blue-cyan-violet-amber color system in theme.css.
+- The intro lasts approximately six seconds, remains skippable, and respects reduced-motion preferences.

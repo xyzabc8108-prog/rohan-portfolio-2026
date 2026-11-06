@@ -7,7 +7,7 @@
   const skipButton = intro.querySelector('.intro-skip');
   let finished = false;
   let skipTimer;
-  const autoTimer = window.setTimeout(removeIntro, 2780);
+  const autoTimer = window.setTimeout(removeIntro, 6400);
   function removeIntro() {
     if (finished) return;
     finished = true;
@@ -29,7 +29,7 @@
         main.setAttribute('tabindex', '-1');
         main.focus({ preventScroll: true });
       }
-    }, 440);
+    }, 475);
   }
   function onKey(event) {
     if (event.key === 'Escape') skipIntro();
