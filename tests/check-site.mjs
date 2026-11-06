@@ -18,8 +18,8 @@ assert(home.includes('Research and broader validation are not complete'),'Deepfa
 assert(home.includes('data-open-search'),'Search trigger available');
 assert(home.includes('id="journey"')&&home.includes('Darshan University')&&home.includes('Marwadi University'),'Journey and education present');
 assert(home.includes('Semester I')&&home.includes('AI-assisted'),'Truthful student identity');
-assert(home.includes('INTERNSHIP ENQUIRY')&&home.includes('RESEARCH COLLABORATION'),'Opportunity contact paths');
-assert(js.includes('Education & Journey')&&js.includes('Internships & Opportunities'),'Career details indexed by search');
+assert(!home.toLowerCase().includes('internship')&&home.includes('RESEARCH COLLABORATION'),'No internship CTA; research contact retained');
+assert(js.includes('Education & Journey')&&js.includes('Projects & Collaboration'),'Profile and contact details indexed by search');
 assert(!read('cv.html').includes('CGPA 6.72')&&!read('cv.html').includes('paper-trading interface'),'Public CV does not promote disputed scores or trading claims');
 assert(home.includes('data-replay-intro')&&home.includes('id="intro-skip"'),'Skippable/replayable intro available');
 assert(css.includes('prefers-reduced-motion'),'Respect reduced-motion preference');

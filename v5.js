@@ -142,7 +142,7 @@
     {title:'All projects',description:'Browse the Digital Lab',href:'index.html#work',keywords:'work portfolio all projects'},
     {title:'About Rohan',description:'Background and working approach',href:'index.html#about',keywords:'about cybersecurity student ai-assisted work'},
     {title:'Education & Journey',description:'Marwadi University, Darshan University and technical support',href:'index.html#journey',keywords:'education darshan marwadi mtech cyber security btech semester 1 rajkot infrastructure windows server networking experience'},
-    {title:'Internships & Opportunities',description:'Contact about internships, mentoring and remote projects',href:'index.html#contact',keywords:'internship opportunity remote career student mentor research python web collaboration'},
+    {title:'Projects & Collaboration',description:'Contact about research and web or Python projects',href:'index.html#contact',keywords:'contact opportunity research mentoring python web collaboration'},
     {title:'How I work',description:'Idea-led, AI-assisted projects',href:'index.html#process',keywords:'process prompt ai build testing workflow'},
     {title:'Contact',description:'Email Rohan',href:'index.html#contact',keywords:'contact email collaborations'},
     {title:'CV',description:'Resume and experience',href:'cv.html',keywords:'cv resume work skills'},
