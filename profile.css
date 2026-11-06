@@ -1,5 +1,5 @@
 /* V5 CAREER PROFILE — AI-assisted projects, real learning and education. */
-.hero-proof{margin-top:24px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.hero-proof{width:100%;flex:1 1 100%;margin-top:24px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
 .hero-proof>div{background:#0c213acd;border:1px solid #2a5275;padding:11px 12px;min-width:0}
 .hero-proof b{display:block;color:var(--accent);font:500 9px/1.6 var(--mono);letter-spacing:.12em;margin-bottom:5px}
 .hero-proof span{color:#c8dcee;font:500 11px/1.55 var(--sans)}

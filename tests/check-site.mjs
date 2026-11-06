@@ -33,6 +33,7 @@ for(const p of paths.filter(x=>x.startsWith('projects/'))){
   const page=read(p);
   assert(page.includes('AI tools generated most of the implementation'),'Case study AI credit '+p);
   assert(page.toLowerCase().includes('not a screenshot'),'Illustration caveat '+p);
+  assert(page.includes('../index.html#journey'),'Case study navigation links to Journey '+p);
   assert(!page.includes('ashokenterprise.com'),'No wrong Ashok domain in '+p);
 }
 const deepfake=read('projects/deepfake-detection.html');
