@@ -17,6 +17,7 @@ The site will be served at **https://xyzabc8108-prog.github.io/rohan-portfolio-2
 - `index.html`: main portfolio
 - `style.css`: responsive monochrome design
 - `script.js`: navigation, scroll effects, accessibility and copy-email action
+- `intro.css`, `intro.js`: skippable 2.7-second monochrome opening transformation with keyboard and reduced-motion support
 - `favicon.svg`: monochrome brand mark
 - `.nojekyll`: static site configuration
 - `cv.html`: retained CV page from the existing repository

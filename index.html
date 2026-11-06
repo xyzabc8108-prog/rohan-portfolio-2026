@@ -15,9 +15,26 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('intro-active');</script>
+  <link rel="stylesheet" href="intro.css">
   <script src="script.js" defer></script>
+  <script src="intro.js" defer></script>
 </head>
 <body>
+  <div class="intro-screen" id="portfolio-intro" role="dialog" aria-modal="true" aria-label="Portfolio opening">
+    <div class="intro-rail"><span>RC / 2026</span><span>AN EXPLORATION OF SECURITY &amp; DESIGN</span></div>
+    <div class="intro-stage">
+      <div class="intro-monogram" aria-hidden="true">R</div>
+      <span class="intro-kicker">WELCOME TO MY WORLD</span>
+      <div class="intro-name" aria-label="Rohan Chhaya"><span>ROHAN</span><span>CHHAYA<span class="intro-period">.</span></span></div>
+      <p class="intro-desc">SECURITY × RESEARCH × ENGINEERING</p>
+    </div>
+    <div class="intro-footer">
+      <span>OPENING PORTFOLIO / 001</span>
+      <div class="intro-progress" aria-hidden="true"><span></span></div>
+      <button class="intro-skip" type="button" aria-label="Skip opening animation">SKIP INTRO ↗</button>
+    </div>
+  </div>
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="progress" id="progress" aria-hidden="true"></div>
   <header class="header" id="top">
