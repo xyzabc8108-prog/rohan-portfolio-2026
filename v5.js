@@ -140,7 +140,9 @@
   const openers=$$('[data-open-search]'), closers=$$('[data-close-search]');
   const pages=[
     {title:'All projects',description:'Browse the Digital Lab',href:'index.html#work',keywords:'work portfolio all projects'},
-    {title:'About Rohan',description:'Education and approach',href:'index.html#about',keywords:'about university cybersecurity student'},
+    {title:'About Rohan',description:'Background and working approach',href:'index.html#about',keywords:'about cybersecurity student ai-assisted work'},
+    {title:'Education & Journey',description:'Marwadi University, Darshan University and technical support',href:'index.html#journey',keywords:'education darshan marwadi mtech cyber security btech semester 1 rajkot infrastructure windows server networking experience'},
+    {title:'Internships & Opportunities',description:'Contact about internships, mentoring and remote projects',href:'index.html#contact',keywords:'internship opportunity remote career student mentor research python web collaboration'},
     {title:'How I work',description:'Idea-led, AI-assisted projects',href:'index.html#process',keywords:'process prompt ai build testing workflow'},
     {title:'Contact',description:'Email Rohan',href:'index.html#contact',keywords:'contact email collaborations'},
     {title:'CV',description:'Resume and experience',href:'cv.html',keywords:'cv resume work skills'},
@@ -154,7 +156,7 @@
   function renderSearch(){
     if(!results||!searchInput)return;
     const query=searchInput.value.trim().toLowerCase();
-    visibleResults=pages.filter(p=>(p.title+' '+p.description+' '+p.keywords).toLowerCase().includes(query)).slice(0,10);
+    visibleResults=pages.filter(p=>(p.title+' '+p.description+' '+p.keywords).toLowerCase().includes(query)).slice(0,15);
     activeResult=0;results.replaceChildren();
     if(!visibleResults.length){
       const empty=document.createElement('p');empty.className='search-empty';

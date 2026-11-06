@@ -3,7 +3,7 @@ import { join, dirname, normalize, resolve, extname } from 'node:path';
 import { execFileSync } from 'node:child_process';
 const root=resolve(process.cwd());
 const paths=[
-  'index.html','v5.css','v5.js','favicon.svg','cv.html',
+  'index.html','v5.css','v5.js','profile.css','favicon.svg','cv.html',
   'projects/deepfake-detection.html','projects/automoto-studio.html',
   'projects/indian-market-lab.html','projects/rovan.html','projects/ashok-enterprise.html'
 ];
@@ -16,6 +16,11 @@ assert((home.match(/class="project-card /g)||[]).length===5,'Exactly five projec
 assert(home.includes('AI tools generated most of the implementation'),'Transparent AI implementation credit');
 assert(home.includes('Research and broader validation are not complete'),'Deepfake status honestly ongoing');
 assert(home.includes('data-open-search'),'Search trigger available');
+assert(home.includes('id="journey"')&&home.includes('Darshan University')&&home.includes('Marwadi University'),'Journey and education present');
+assert(home.includes('Semester I')&&home.includes('AI-assisted'),'Truthful student identity');
+assert(home.includes('INTERNSHIP ENQUIRY')&&home.includes('RESEARCH COLLABORATION'),'Opportunity contact paths');
+assert(js.includes('Education & Journey')&&js.includes('Internships & Opportunities'),'Career details indexed by search');
+assert(!read('cv.html').includes('CGPA 6.72')&&!read('cv.html').includes('paper-trading interface'),'Public CV does not promote disputed scores or trading claims');
 assert(home.includes('data-replay-intro')&&home.includes('id="intro-skip"'),'Skippable/replayable intro available');
 assert(css.includes('prefers-reduced-motion'),'Respect reduced-motion preference');
 assert(css.includes('data-accent="violet"')&&css.includes('data-accent="amber"'),'Accent alternatives');

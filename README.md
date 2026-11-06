@@ -54,3 +54,12 @@ node tests/check-site.mjs
 To preview locally, serve the root folder (e.g., \`python -m http.server 8000\`) and open \`http://localhost:8000/\`. No build step.
 
 The intro plays once per browser tab session (with optional footer Replay). Users can Skip with the button or Escape. Reduced-motion preferences skip the intro and disable continuous animations.
+
+## Career-focused personalization (November 2026)
+
+- The homepage now shows **M.Tech Cyber Security, Semester I (Marwadi University, Rajkot)**, **B.Tech CSE (Darshan University, 2021–2025)** and a distinct technical/infrastructure support background.
+- The Journey section separates confirmed education and support work from AI-assisted portfolio prototypes; avoids claiming digital-forensics specialization.
+- Internship, research-collaboration and scoped web/Python enquiry links are interests, not proof of work offers or prior contracts.
+- `profile.css` extends V5 styling for the new story and mobile layout.
+- Command search indexes education, experience and opportunities.
+- Public CV project descriptions now match the actual research/prototype statuses; CGPA omitted because earlier résumé copies disagree.
