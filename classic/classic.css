@@ -143,3 +143,44 @@ html.intro-on .opening.is-skipping{animation:opening-leave .42s cubic-bezier(.75
 @media(max-width:360px){.wordmark-name{display:none}.hero h1{font-size:15vw}.project-info h3{font-size:43px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}html.intro-on .opening{display:none!important}.hero-art-center>span{transform:none}}
 @media print{.opening,.menu-button,.replay-intro,.footer,.site-nav{display:none!important}body{background:white}.hero-columns,.case-hero{display:block}.hero-art,.case-poster{display:none}}
+
+
+/* PROFESSIONAL TYPOGRAPHY — standard sans serif across Classic */
+:root{--serif:'DM Sans',Arial,sans-serif;--mono:'DM Sans',Arial,sans-serif}
+em{font-style:normal}
+.wordmark-initials{font-size:30px;font-weight:700}
+.hero h1{font-size:clamp(61px,6.8vw,108px);font-weight:600;line-height:1.04;letter-spacing:-.055em}
+.hero-art-center>span{font-size:clamp(190px,25vw,350px);font-weight:600}
+.hero-art-center>b{font-size:clamp(75px,11vw,140px);font-weight:600}
+.section-head h2{font-size:clamp(46px,5.6vw,82px);font-weight:600;line-height:1.08;letter-spacing:-.05em}
+.project-info h3{font-size:clamp(31px,3.35vw,49px);font-weight:600;line-height:1.14;letter-spacing:-.043em}
+.graphic-symbol{font-size:clamp(85px,10vw,150px);font-weight:600}
+.graphic-rovan .graphic-symbol{font-size:155px}
+.timeline-entry h3{font-size:clamp(23px,2.35vw,33px);font-weight:600;line-height:1.22}
+.background-note>p{font-size:clamp(26px,2.65vw,39px);font-weight:500;line-height:1.2}
+.note-signature>span{font-size:42px;font-weight:600}
+.approach-section h2{font-size:clamp(47px,5.5vw,82px);font-weight:600;line-height:1.08}
+.approach-steps h3{font-size:27px;font-weight:600}
+.contact-section h2{font-size:clamp(47px,5.6vw,86px);font-weight:600;line-height:1.08}
+.contact-email{font-size:clamp(23px,3.3vw,40px);font-weight:500}
+.opening-center h2{font-size:clamp(48px,8.5vw,120px);font-weight:600;line-height:1.1}
+.opening-monogram{font-size:min(31vw,410px);font-weight:500}
+.case-hero h1{font-size:clamp(54px,6.2vw,92px);font-weight:600;line-height:1.1;overflow-wrap:break-word}
+.case-poster-main{font-size:clamp(105px,14vw,200px);font-weight:600}
+.case-section h2{font-size:clamp(32px,3.8vw,51px);font-weight:600;line-height:1.15}
+@media(max-width:920px){.hero h1{font-size:clamp(61px,9vw,93px)}}
+@media(max-width:650px){
+ .hero h1{font-size:clamp(48px,11.4vw,72px)}
+ .hero-art-center>span{font-size:194px}.hero-art-center>b{font-size:95px}
+ .section-head h2{font-size:clamp(39px,10vw,56px)}
+ .project-info h3{font-size:clamp(29px,8vw,40px)}
+ .graphic-symbol{font-size:120px}.graphic-rovan .graphic-symbol{font-size:136px}
+ .approach-section h2{font-size:clamp(43px,10vw,60px)}
+ .contact-section h2{font-size:clamp(39px,10vw,62px)}
+ .contact-email{font-size:clamp(21px,6vw,33px)}
+ .opening-center h2{font-size:clamp(44px,10.5vw,74px)}
+ .opening-monogram{font-size:45vw}
+ .case-hero h1{font-size:clamp(43px,10vw,68px)}
+ .case-poster-main{font-size:140px}
+}
+@media(max-width:360px){.hero h1{font-size:11vw}.project-info h3{font-size:29px}.contact-email{font-size:19px}.opening-center h2{font-size:10vw}}
