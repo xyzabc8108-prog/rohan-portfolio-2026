@@ -13,7 +13,7 @@ for(const p of paths)assert(existsSync(join(root,p)),'Missing '+p);
 const read=p=>readFileSync(join(root,p),'utf8');
 const home=read('index.html'),js=read('v5.js'),css=read('v5.css');
 assert((home.match(/class="project-card /g)||[]).length===5,'Exactly five project cards');
-assert(home.includes('AI tools generate most of the implementation'),'Transparent AI implementation credit');
+assert(home.includes('AI tools generated most of the implementation'),'Transparent AI implementation credit');
 assert(home.includes('Research and broader validation are not complete'),'Deepfake status honestly ongoing');
 assert(home.includes('data-open-search'),'Search trigger available');
 assert(home.includes('data-replay-intro')&&home.includes('id="intro-skip"'),'Skippable/replayable intro available');
