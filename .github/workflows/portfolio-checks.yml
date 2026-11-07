@@ -23,3 +23,5 @@ jobs:
           node-version: "22"
       - name: Test HTML, project claims, URLs and JavaScript
         run: node tests/check-site.mjs
+      - name: Audit landmarks, keyboard links, motion and source-size budgets
+        run: node tests/audit-ui.mjs
