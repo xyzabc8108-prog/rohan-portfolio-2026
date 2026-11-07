@@ -140,6 +140,7 @@
   const openers=$$('[data-open-search]'), closers=$$('[data-close-search]');
   const pages=[
     {title:'All projects',description:'Browse the Digital Lab',href:'index.html#work',keywords:'work portfolio all projects'},
+    {title:'Evidence & Progress',description:'Five project milestones and verification gaps',href:'project-log.html',keywords:'project timeline evidence results testing screenshots log'},
     {title:'About Rohan',description:'Background and working approach',href:'index.html#about',keywords:'about cybersecurity student ai-assisted work'},
     {title:'Education & Journey',description:'Marwadi University, Darshan University and technical support',href:'index.html#journey',keywords:'education darshan marwadi mtech cyber security btech semester 1 rajkot infrastructure windows server networking experience'},
     {title:'Projects & Collaboration',description:'Contact about research and web or Python projects',href:'index.html#contact',keywords:'contact opportunity research mentoring python web collaboration'},
@@ -159,13 +160,14 @@
     visibleResults=pages.filter(p=>(p.title+' '+p.description+' '+p.keywords).toLowerCase().includes(query)).slice(0,15);
     activeResult=0;results.replaceChildren();
     if(!visibleResults.length){
+      searchInput.removeAttribute('aria-activedescendant');
       const empty=document.createElement('p');empty.className='search-empty';
       empty.textContent='No matching projects or pages. Try a different keyword.';
       results.appendChild(empty);return;
     }
     visibleResults.forEach((p,i)=>{
       const a=document.createElement('a');a.className='search-result'+(i===activeResult?' is-selected':'');
-      a.href=p.href;a.setAttribute('role','option');a.setAttribute('aria-selected',String(i===activeResult));
+      a.href=p.href;a.id='search-option-'+i;a.setAttribute('role','option');a.setAttribute('aria-selected',String(i===activeResult));
       const label=document.createElement('div'),title=document.createElement('span'),description=document.createElement('small'),arrow=document.createElement('b');
       title.textContent=p.title;description.textContent=p.description;arrow.textContent='↗';
       label.append(title,description);a.append(label,arrow);
@@ -173,10 +175,12 @@
       a.addEventListener('click',closeSearch);
       results.appendChild(a);
     });
+    searchInput.setAttribute('aria-activedescendant','search-option-'+activeResult);
   }
   function selectSearch(i){
     activeResult=(i+visibleResults.length)%visibleResults.length;
-    $$('.search-result',results).forEach((a,j)=>{
+    searchInput?.setAttribute('aria-activedescendant','search-option-'+activeResult);
+    $('.search-result',results).forEach((a,j)=>{
       a.classList.toggle('is-selected',j===activeResult);
       a.setAttribute('aria-selected',String(j===activeResult));
     });
@@ -187,6 +191,7 @@
     closeMenu();
     lastFocus=document.activeElement;
     overlay.hidden=false;
+    searchInput?.setAttribute('aria-expanded','true');
     if(shell)shell.inert=true;
     setScrollLock();
     if(searchInput)searchInput.value='';
@@ -196,6 +201,8 @@
   function closeSearch(){
     if(!overlay||overlay.hidden)return;
     overlay.hidden=true;
+    searchInput?.setAttribute('aria-expanded','false');
+    searchInput?.removeAttribute('aria-activedescendant');
     if(shell)shell.inert=false;
     setScrollLock();
     if(lastFocus?.isConnected)lastFocus.focus({preventScroll:true});
@@ -262,7 +269,7 @@
 
   /* Accessible current-section indication; no navigation hijacking. */
   if(onHome && 'IntersectionObserver' in window){
-    const localNav=$('#site-nav a[href^="#"]');
+    const localNav = Array.from(document.querySelectorAll('#site-nav a[href^="#"]'));
     const sections=localNav.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
     const sectionObserver=new IntersectionObserver(entries=>{
       const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio);
@@ -274,6 +281,9 @@
     },{rootMargin:'-18% 0px -58% 0px',threshold:[0,.1,.3,.6]});
     sections.forEach(el=>sectionObserver.observe(el));
   }
+
+  /* Pause cosmetic animations when the tab is hidden. */
+  document.addEventListener('visibilitychange',()=>root.classList.toggle('tab-hidden',document.hidden));
 
   /* Scroll progress, lightweight, passive. */
   const progress=$('.scroll-progress');let busy=false;

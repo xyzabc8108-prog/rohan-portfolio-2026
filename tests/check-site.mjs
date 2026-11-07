@@ -3,7 +3,7 @@ import { join, dirname, normalize, resolve, extname } from 'node:path';
 import { execFileSync } from 'node:child_process';
 const root=resolve(process.cwd());
 const paths=[
-  'index.html','v5.css','v5.js','profile.css','favicon.svg','social-preview.png','robots.txt','sitemap.xml','cv.html',
+  'index.html','v5.css','v5.js','profile.css','favicon.svg','social-preview.png','robots.txt','sitemap.xml','cv.html','project-log.html','project-log.css',
   'projects/deepfake-detection.html','projects/automoto-studio.html',
   'projects/indian-market-lab.html','projects/rovan.html','projects/ashok-enterprise.html'
 ];
@@ -16,6 +16,14 @@ assert((home.match(/class="project-card /g)||[]).length===5,'Exactly five projec
 assert(home.includes('AI tools generated most of the implementation'),'Transparent AI implementation credit');
 assert(home.includes('Research and broader validation are not complete'),'Deepfake status honestly ongoing');
 assert(home.includes('data-open-search'),'Search trigger available');
+assert(js.includes("Array.from(document.querySelectorAll('#site-nav a[href^="),'Fix navigation singleton selector bug');
+assert(home.includes('role="combobox"')&&js.includes('aria-activedescendant'),'Accessible command search');
+assert(home.includes('href="project-log.html"')&&js.includes('Evidence & Progress'),'Progress log linked and searchable');
+assert((read('project-log.html').match(/class="log-entry"/g)||[]).length===5,'Log for five projects');
+assert(read('project-log.html').includes('NO FABRICATED PRODUCT SCREENSHOTS'),'Truthful screenshot policy');
+assert(css.includes('html.tab-hidden')&&js.includes('visibilitychange'),'Pause background animations');
+assert(css.includes('.filter{min-height:44px}')&&css.includes(':focus-visible'),'Touch and keyboard controls');
+assert(Buffer.byteLength(css,'utf8')<85000&&Buffer.byteLength(js,'utf8')<25000,'CSS and JavaScript size budget');
 assert(home.includes('id="motion-toggle"')&&js.includes("rc-quiet-mode"),'Accessible low-effects control');
 assert(home.includes('class="review-block"')&&home.includes('119 test clips'),'Honest evidence summary');
 assert(home.includes('social-preview.png')&&home.includes('twitter:card'),'Share image metadata');
