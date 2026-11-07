@@ -59,7 +59,19 @@ The intro plays once per browser tab session (with optional footer Replay). User
 
 - The homepage now shows **M.Tech Cyber Security, Semester I (Marwadi University, Rajkot)**, **B.Tech CSE (Darshan University, 2021–2025)** and a distinct technical/infrastructure support background.
 - The Journey section separates confirmed education and support work from AI-assisted portfolio prototypes; avoids claiming digital-forensics specialization.
-- Internship, research-collaboration and scoped web/Python enquiry links are interests, not proof of work offers or prior contracts.
+- Contact options are for research discussions and scoped web/Python projects. No internship CTA is shown.
 - `profile.css` extends V5 styling for the new story and mobile layout.
 - Command search indexes education, experience and opportunities.
 - Public CV project descriptions now match the actual research/prototype statuses; CGPA omitted because earlier résumé copies disagree.
+
+## Digital Lab updates — November 2026
+
+- The old duplicate `classic/` directory was removed after the independent Classic repository was created, tested and published. The two portfolios now have separate repositories and assets.
+- Optional **LESS MOTION** control on the home page persists as a preference, while the 6.6-second introduction retains Skip, Escape, Replay and reduced-motion support.
+- A clearer project evidence summary now separates reported experiment results from unverified application screenshots and prototypes; no fake screenshots are presented.
+- All five case studies disclose what is actually documented and where verification is incomplete.
+- A dedicated **1200 × 630 PNG social-preview image**, Open Graph and Twitter tags, improved case-study descriptions and a sitemap with the CV are included.
+- Responsive improvements address small-screen controls, focus states and expensive animations; automated static checks run through GitHub Actions.
+- Standalone Classic repo: https://github.com/xyzabc8108-prog/rohan-portfolio-classic (independent project, not loaded into Digital Lab).
+
+**Verification limitations:** Site checks and GitHub Pages build status do not replace hands-on browser performance audits or screenshots from an authenticated running application. Future verified media can be added with permission.
