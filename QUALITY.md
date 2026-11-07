@@ -4,7 +4,7 @@ This is a source-level quality review and a record of open validation tasks.
 
 ## What was checked
 
-- Eight HTML pages: homepage, project progress log, CV and five case studies.
+- Seven HTML pages: homepage, project progress log, CV and four case studies.
 - Proper document language, mobile viewport, semantic main and heading landmarks, skip-to-content links and unique IDs.
 - Accessible labels on illustrative role=img elements, image alt attributes and noopener security for new-tab links.
 - Valid in-page anchor targets, presence of an evidence record, no unwanted internship pitch, and an accessible command-search input.
@@ -17,7 +17,7 @@ This is a source-level quality review and a record of open validation tasks.
 
 - The reported 97.48% Deepfake Detection result is specific to an early 119-clip test; it is not external verification.
 - Public Indian Market Lab is a restricted fictional-data demonstration.
-- AutoMoto, ROVAN and Ashok Enterprise have private/local or unfinished status.
+- AutoMoto and ROVAN have private/local or unfinished status.
 - No genuine product screenshots have been published without verifying permission, visible functionality and privacy.
 - No measured Lighthouse score, field Core Web Vitals, WCAG conformance statement or real-device usability result is claimed by these source tests.
 

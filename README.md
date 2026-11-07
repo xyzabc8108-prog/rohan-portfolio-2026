@@ -11,7 +11,7 @@ This is a **personal, idea-led / AI-assisted portfolio**, not a collection of cl
 - \`index.html\` — cinematic home, original decorative project artwork, five project filters, interactive search, introduction, transparent AI credit, contact.
 - \`v5.css\` — responsive deep-blue / cyan / violet / amber design, case-study styles, accessibility, and reduced-motion behavior.
 - \`v5.js\` — Ctrl/Cmd+K search, arrow-key navigation, 3 palette variants, session-limited 6.6-second intro, Skip/Escape, reveal effects, scroll progress, mobile nav, clipboard.
-- \`projects/*.html\` — five evidence-first case studies.
+- \`projects/*.html\` — four evidence-first case studies.
 - \`cv.html\` — preserved printable CV.
 - \`tests/check-site.mjs\` — static source checks (links, claims, script syntax).
 - \`.github/workflows/portfolio-checks.yml\` — validation on commit and pull requests.
@@ -28,7 +28,6 @@ Earlier \`style.css\`, \`theme.css\`, \`script.js\`, \`intro.css\` and \`intro.j
 | AutoMoto Studio | Private work-in-progress | Owner-only Render website |
 | Indian Market Lab | Safety-restricted public research demo | [Public Render site](https://indian-market-lab-fullstack.onrender.com/) |
 | ROVAN | Local Windows voice assistant prototype | No public local app |
-| Ashok Enterprise | Private AI-assisted web development | No verified live deployment |
 
 **Caveats:**
 
@@ -36,7 +35,6 @@ Earlier \`style.css\`, \`theme.css\`, \`script.js\`, \`intro.css\` and \`intro.j
 - The deepfake project's **97.48%** fusion result applies to a preliminary experimental evaluation of **119 test clips** on one dataset/split. It is not a completed result or a real-world deployment claim.
 - Indian Market Lab public mode uses fictional data and restrictive Market Data Safety Mode. It does not provide authorized real-time live stock recommendations or brokerage orders.
 - AutoMoto's Render website requires authentication. A link to the owner-only service is **not** an open public demo.
-- Ashok Enterprise's private source is not evidence of control over any similarly named public company. The unrelated \`ashokenterprise.com\` link must not be restored without ownership verification.
 - No screenshots have been invented. The cards and case posters use original CSS/SVG art marked as **illustrations, not product screenshots**.
 - Digital forensics is **not** claimed as Rohan's specialty.
 - "Next steps" in case studies are proposals, not completed deliverables.
@@ -69,7 +67,7 @@ The intro plays once per browser tab session (with optional footer Replay). User
 - The old duplicate `classic/` directory was removed after the independent Classic repository was created, tested and published. The two portfolios now have separate repositories and assets.
 - Optional **LESS MOTION** control on the home page persists as a preference, while the 6.6-second introduction retains Skip, Escape, Replay and reduced-motion support.
 - A clearer project evidence summary now separates reported experiment results from unverified application screenshots and prototypes; no fake screenshots are presented.
-- All five case studies disclose what is actually documented and where verification is incomplete.
+- All four case studies disclose what is actually documented and where verification is incomplete.
 - A dedicated **1200 × 630 PNG social-preview image**, Open Graph and Twitter tags, improved case-study descriptions and a sitemap with the CV are included.
 - Responsive improvements address small-screen controls, focus states and expensive animations; automated static checks run through GitHub Actions.
 - Standalone Classic repo: https://github.com/xyzabc8108-prog/rohan-portfolio-classic (independent project, not loaded into Digital Lab).

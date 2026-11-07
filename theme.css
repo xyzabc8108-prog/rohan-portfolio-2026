@@ -67,8 +67,6 @@ button:focus-visible,a:focus-visible{outline-color:#60dfff}
 .work-item:hover .work-artwork{transform:translateY(-6px);box-shadow:0 32px 65px #112c7655}
 .art-topline,.art-bottomline{color:#e4f5ff}
 .image-deepfake{background:radial-gradient(circle at 55% 36%,#174d91,#091b3a 65%,#061326)}
-.image-ashok{background:radial-gradient(circle at 55% 35%,#385f88,#122d45 64%,#0c192c);color:#f7fcff}
-.image-ashok .art-bottomline,.image-ashok .vertical-caption{color:#d5efff}
 .image-market{background:radial-gradient(circle at 63% 35%,#214b9c,#0c1d3f 69%);color:#f1faff}
 .image-rovan{background:radial-gradient(circle at 43% 46%,#3341b3,#14194e 57%,#08152c);color:#f4fbff}
 .image-rovan .art-bottomline{color:#f2faff}

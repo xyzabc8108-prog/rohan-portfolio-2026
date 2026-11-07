@@ -140,7 +140,7 @@
   const openers=$$('[data-open-search]'), closers=$$('[data-close-search]');
   const pages=[
     {title:'All projects',description:'Browse the Digital Lab',href:'index.html#work',keywords:'work portfolio all projects'},
-    {title:'Evidence & Progress',description:'Five project milestones and verification gaps',href:'project-log.html',keywords:'project timeline evidence results testing screenshots log'},
+    {title:'Evidence & Progress',description:'Four project milestones and verification gaps',href:'project-log.html',keywords:'project timeline evidence results testing screenshots log'},
     {title:'About Rohan',description:'Background and working approach',href:'index.html#about',keywords:'about cybersecurity student ai-assisted work'},
     {title:'Education & Journey',description:'Marwadi University, Darshan University and technical support',href:'index.html#journey',keywords:'education darshan marwadi mtech cyber security btech semester 1 rajkot infrastructure windows server networking experience'},
     {title:'Projects & Collaboration',description:'Contact about research and web or Python projects',href:'index.html#contact',keywords:'contact opportunity research mentoring python web collaboration'},
@@ -151,7 +151,6 @@
     {title:'AutoMoto Studio',description:'Owner-only automotive video editor',href:'projects/automoto-studio.html',keywords:'car bike reels video creative render'},
     {title:'Indian Market Lab',description:'Safety-restricted research demo',href:'projects/indian-market-lab.html',keywords:'market research synthetic chart safe demo'},
     {title:'ROVAN',description:'Local AI assistant prototype',href:'projects/rovan.html',keywords:'ollama whisper voice local assistant'},
-    {title:'Ashok Enterprise',description:'Private industrial web project',href:'projects/ashok-enterprise.html',keywords:'private react vite supabase machinery catalog'}
   ];
   let visibleResults=[],activeResult=0,lastFocus=null;
   function renderSearch(){

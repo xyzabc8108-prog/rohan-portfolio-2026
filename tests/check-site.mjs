@@ -5,21 +5,21 @@ const root=resolve(process.cwd());
 const paths=[
   'index.html','v5.css','v5.js','profile.css','favicon.svg','social-preview.png','robots.txt','sitemap.xml','cv.html','project-log.html','project-log.css',
   'projects/deepfake-detection.html','projects/automoto-studio.html',
-  'projects/indian-market-lab.html','projects/rovan.html','projects/ashok-enterprise.html'
+  'projects/indian-market-lab.html','projects/rovan.html'
 ];
 let tests=0;
 function assert(ok,msg){tests++;if(!ok)throw new Error('FAIL: '+msg);}
 for(const p of paths)assert(existsSync(join(root,p)),'Missing '+p);
 const read=p=>readFileSync(join(root,p),'utf8');
 const home=read('index.html'),js=read('v5.js'),css=read('v5.css');
-assert((home.match(/class="project-card /g)||[]).length===5,'Exactly five project cards');
+assert((home.match(/class="project-card /g)||[]).length===4,'Exactly four project cards');
 assert(home.includes('AI tools generated most of the implementation'),'Transparent AI implementation credit');
 assert(home.includes('Research and broader validation are not complete'),'Deepfake status honestly ongoing');
 assert(home.includes('data-open-search'),'Search trigger available');
 assert(js.includes("Array.from(document.querySelectorAll('#site-nav a[href^="),'Fix navigation singleton selector bug');
 assert(home.includes('role="combobox"')&&js.includes('aria-activedescendant'),'Accessible command search');
 assert(home.includes('href="project-log.html"')&&js.includes('Evidence & Progress'),'Progress log linked and searchable');
-assert((read('project-log.html').match(/class="log-entry"/g)||[]).length===5,'Log for five projects');
+assert((read('project-log.html').match(/class="log-entry"/g)||[]).length===4,'Log for four projects');
 assert(read('project-log.html').includes('NO FABRICATED PRODUCT SCREENSHOTS'),'Truthful screenshot policy');
 assert(css.includes('html.tab-hidden')&&js.includes('visibilitychange'),'Pause background animations');
 assert(css.includes('.filter{min-height:44px}')&&css.includes(':focus-visible'),'Touch and keyboard controls');
@@ -39,7 +39,7 @@ assert(css.includes('data-accent="violet"')&&css.includes('data-accent="amber"')
 assert(js.includes("sessionStorage.setItem('rc-intro-seen'")&&js.includes('6630'),'Intro timing/session behavior');
 assert(js.includes("e.key==='Escape'")&&js.includes("e.key.toLowerCase()==='k'"),'Keyboard commands');
 assert(!home.toLowerCase().includes('digital forensic'),'No unwanted specialization');
-assert(!home.includes('ashokenterprise.com'),'No unrelated Ashok public domain');
+
 assert(home.includes('The interface artwork above is illustrative'),'Artwork disclosure');
 for(const p of paths.filter(x=>x.startsWith('projects/'))){
   const page=read(p);
@@ -47,7 +47,7 @@ for(const p of paths.filter(x=>x.startsWith('projects/'))){
   assert(page.toLowerCase().includes('not a screenshot'),'Illustration caveat '+p);
   assert(page.includes('../index.html#journey'),'Case study navigation links to Journey '+p);
   assert(page.includes('class="case-evidence"')&&page.includes('social-preview.png'),'Evidence and SEO on '+p);
-  assert(!page.includes('ashokenterprise.com'),'No wrong Ashok domain in '+p);
+
 }
 const deepfake=read('projects/deepfake-detection.html');
 assert(deepfake.includes('NOT COMPLETED')&&deepfake.includes('not finished'),'Research incomplete');

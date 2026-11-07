@@ -234,18 +234,6 @@ html.show-intro .intro-overlay.is-skipping{animation:intro-exit .44s cubic-bezie
 .rovan-terminal{position:absolute;bottom:16%;font:500 11px var(--mono);color:#a8eeff}
 .cursor{display:inline-block;width:6px;height:12px;background:#9af5ff;margin-left:5px;animation:blink 1s steps(2) infinite}
 @keyframes blink{50%{opacity:0}}
-.art-ashok{background:radial-gradient(circle at 60% 45%,#8972485b,transparent 44%),linear-gradient(150deg,#17273b,#29293c 60%,#0f1e35)}
-.ashok-viz{height:100%;position:relative;display:grid;place-items:center}
-.ashok-glow{position:absolute;width:270px;height:160px;border:1px solid #e3ab7177;transform:skewY(-15deg);box-shadow:0 0 40px #d09d6233}
-.ashok-machine{position:relative;width:250px;height:160px;transform:skewY(-9deg)}
-.machine-main{position:absolute;left:46px;top:37px;width:154px;height:80px;border:3px solid #d9d0b6;background:linear-gradient(120deg,#5f7289,#202c45);display:flex;align-items:center;justify-content:space-around}
-.machine-main span{width:12px;height:57px;background:repeating-linear-gradient(0deg,#d6d4bb 0 5px,#6a7784 5px 10px)}
-.machine-belt{position:absolute;left:20px;right:15px;top:119px;height:16px;background:linear-gradient(#9ab6b5,#445668);transform:skewX(24deg)}
-.machine-roller{position:absolute;bottom:12px;width:35px;height:35px;border-radius:50%;border:8px solid #1c2438;background:#e0c49b}
-.machine-roller.a{left:51px}.machine-roller.b{right:39px}
-.machine-hopper{position:absolute;top:0;left:92px;width:65px;height:42px;background:linear-gradient(#d1cab4,#7b8a95);clip-path:polygon(0 0,100% 0,75% 100%,24% 100%)}
-.ashok-annotate{position:absolute;right:10%;top:16%;font:500 9px var(--mono);color:#e6c5a5;writing-mode:vertical-rl}
-
 /* Process */
 .process{background:radial-gradient(circle at 85% 18%,#35367b59,transparent 35%),linear-gradient(115deg,#0b1731,#111432);border-block:1px solid #263b60}
 .process-heading{max-width:1180px;display:grid;grid-template-columns:1fr 310px;gap:40px;align-items:end;margin-bottom:58px}
