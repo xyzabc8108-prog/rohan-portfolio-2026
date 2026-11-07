@@ -244,6 +244,37 @@
   }else reveals.forEach(el=>el.classList.add('visible'));
   reduced.addEventListener?.('change',e=>{if(e.matches)reveals.forEach(el=>el.classList.add('visible'));});
 
+
+  /* Optional focus mode: fewer visual effects without removing the core design. */
+  const motionButton=$('#motion-toggle');
+  function setQuietMode(value){
+    root.classList.toggle('quiet-mode',value);
+    if(motionButton){
+      motionButton.setAttribute('aria-pressed',String(value));
+      motionButton.setAttribute('aria-label',value?'Restore visual effects':'Reduce visual effects');
+      motionButton.textContent=value?'MORE MOTION':'LESS MOTION';
+    }
+    try{localStorage.setItem('rc-quiet-mode',value?'1':'0')}catch(e){}
+  }
+  let quiet=false;try{quiet=localStorage.getItem('rc-quiet-mode')==='1'}catch(e){}
+  setQuietMode(quiet);
+  motionButton?.addEventListener('click',()=>setQuietMode(!root.classList.contains('quiet-mode')));
+
+  /* Accessible current-section indication; no navigation hijacking. */
+  if(onHome && 'IntersectionObserver' in window){
+    const localNav=$('#site-nav a[href^="#"]');
+    const sections=localNav.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+    const sectionObserver=new IntersectionObserver(entries=>{
+      const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio);
+      if(!visible.length)return;
+      localNav.forEach(a=>{
+        if(a.getAttribute('href')==='#'+visible[0].target.id)a.setAttribute('aria-current','location');
+        else a.removeAttribute('aria-current');
+      });
+    },{rootMargin:'-18% 0px -58% 0px',threshold:[0,.1,.3,.6]});
+    sections.forEach(el=>sectionObserver.observe(el));
+  }
+
   /* Scroll progress, lightweight, passive. */
   const progress=$('.scroll-progress');let busy=false;
   function renderProgress(){

@@ -3,7 +3,7 @@ import { join, dirname, normalize, resolve, extname } from 'node:path';
 import { execFileSync } from 'node:child_process';
 const root=resolve(process.cwd());
 const paths=[
-  'index.html','v5.css','v5.js','profile.css','favicon.svg','cv.html',
+  'index.html','v5.css','v5.js','profile.css','favicon.svg','social-preview.png','robots.txt','sitemap.xml','cv.html',
   'projects/deepfake-detection.html','projects/automoto-studio.html',
   'projects/indian-market-lab.html','projects/rovan.html','projects/ashok-enterprise.html'
 ];
@@ -16,6 +16,10 @@ assert((home.match(/class="project-card /g)||[]).length===5,'Exactly five projec
 assert(home.includes('AI tools generated most of the implementation'),'Transparent AI implementation credit');
 assert(home.includes('Research and broader validation are not complete'),'Deepfake status honestly ongoing');
 assert(home.includes('data-open-search'),'Search trigger available');
+assert(home.includes('id="motion-toggle"')&&js.includes("rc-quiet-mode"),'Accessible low-effects control');
+assert(home.includes('class="review-block"')&&home.includes('119 test clips'),'Honest evidence summary');
+assert(home.includes('social-preview.png')&&home.includes('twitter:card'),'Share image metadata');
+assert(css.includes('.case-evidence')&&css.includes('quiet-mode'),'Evidence and quiet-mode styling');
 assert(home.includes('id="journey"')&&home.includes('Darshan University')&&home.includes('Marwadi University'),'Journey and education present');
 assert(home.includes('Semester I')&&home.includes('AI-assisted'),'Truthful student identity');
 assert(!home.toLowerCase().includes('internship')&&home.includes('RESEARCH COLLABORATION'),'No internship CTA; research contact retained');
@@ -34,6 +38,7 @@ for(const p of paths.filter(x=>x.startsWith('projects/'))){
   assert(page.includes('AI tools generated most of the implementation'),'Case study AI credit '+p);
   assert(page.toLowerCase().includes('not a screenshot'),'Illustration caveat '+p);
   assert(page.includes('../index.html#journey'),'Case study navigation links to Journey '+p);
+  assert(page.includes('class="case-evidence"')&&page.includes('social-preview.png'),'Evidence and SEO on '+p);
   assert(!page.includes('ashokenterprise.com'),'No wrong Ashok domain in '+p);
 }
 const deepfake=read('projects/deepfake-detection.html');
